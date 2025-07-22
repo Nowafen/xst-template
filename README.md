@@ -24,7 +24,7 @@ To use this template:
    nuclei -u https://domain.tld -t xst-template/
    ```
 3. Review the response for `TRACE` method reflection.
-
+4. [poC on lab](https://t.me/GoSecurity/41)
 ## References
 - OWASP: https://owasp.org/www-community/attacks/Cross_Site_Tracing  
 - PortSwigger: https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-authentication-bypass
