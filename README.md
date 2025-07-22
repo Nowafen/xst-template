@@ -13,13 +13,14 @@ If vulnerable, the application could:
 - Allow attackers to bypass session security.
 - Be chained with client-side vulnerabilities like XSS to extract sensitive data via malicious JavaScript.
 
-### Usage
+### Installations and use
 
 To use this template:
 1. Ensure you have [Nuclei](https://github.com/projectdiscovery/nuclei) installed.
 2. Run the scan with:
    ```
-   nuclei -u https://target.com -t Cross-Site-Tracing.yaml
+   git clone https://github.com/Nowafen/xst-template.git
+   nuclei -u https://domain.tld -t xst-template/
    ```
 3. Review the response for `TRACE` method reflection.
 
