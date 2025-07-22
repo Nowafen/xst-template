@@ -21,7 +21,7 @@ To use this template:
 2. Run the scan with:
    ```
    git clone https://github.com/Nowafen/xst-template.git
-   nuclei -u https://domain.tld -t xst-template/
+   nuclei -u https://domain.tld -t Template/
    ```
 3. Review the response for `TRACE` method reflection.
 4. [poC on lab](https://t.me/GoSecurity/41)
