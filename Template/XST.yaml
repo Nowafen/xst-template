@@ -1,0 +1,31 @@
+id: Cross-Site-Tracing
+
+info:
+  name: Testing Trace method
+  author: MNM
+  severity: critical
+  description: Detects HTTP TRACE method reflection vulnerability
+  reference:
+    - https://owasp.org/www-community/attacks/Cross_Site_Tracing
+    - https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-authentication-bypass
+  tags: trace,http-method,XST
+
+http:
+  - method: TRACE
+    path:
+      - "{{BaseURL}}"
+    
+    headers:
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15"
+    
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      
+      - type: word
+        part: body
+        words:
+          - "TRACE"
+        case-insensitive: true
